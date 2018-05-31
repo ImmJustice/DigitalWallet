@@ -58,7 +58,6 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
-    <Folder Include="Views" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\User.sql" />
@@ -67,6 +66,5 @@
     <Build Include="Tables\Invoice.sql" />
     <Build Include="Tables\Transaction.sql" />
     <Build Include="Tables\WorkAllocation.sql" />
-    <Build Include="Views\InvoiceView.sql" />
   </ItemGroup>
 </Project>
