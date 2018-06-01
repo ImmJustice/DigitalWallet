@@ -52,20 +52,24 @@ INSERT INTO [USER] (UserID, UserType, FirstName,  LastName, Email, PhoneNo, Acco
 (55555, 'R', 'Anh', 'Nguyen', 'anhguyen@yahoomail.com.au', 0444444444, 11111); 
 
 INSERT INTO WORKALLOCATION (TeamID, UserID, [Role]) VALUES
-(98765, 12345, 'Leader'),
-(98765, 23456, 'Member'),
-(98765, 34567, 'Resource'),
-(87654, 23456, 'Leader'),
-(87654, 34567, 'Member'),
-(87654, 45678, 'Resource'),
-(76543, 34567, 'Leader'),
-(76543, 45678, 'Member'),
-(76543, 56789, 'Resource'),
-(65432, 45678, 'Leader'),
-(65432, 56789, 'Member'),
-(65432, 12345, 'Resource'),
-(54321, 56789, 'Leader'),
-(54321, 12345, 'Member'),
-(54321, 23456, 'Resource');
+(98765, 15935, 'Leader'),
+(98765, 35795, 'Member'),
+(98765, 75365, 'Resource'),
+
+(87654, 35795, 'Leader'),
+(87654, 75365, 'Member'),
+(87654, 95125, 'Resource'),
+
+(76543, 75365, 'Leader'),
+(76543, 95125, 'Member'),
+(76543, 85245, 'Resource'),
+
+(65432, 95125, 'Leader'),
+(65432, 85245, 'Member'),
+(65432, 15935, 'Resource'),
+
+(54321, 85245, 'Leader'),
+(54321, 15935, 'Member'),
+(54321, 35795, 'Resource');
 
 END;
