@@ -71,4 +71,10 @@
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeploymentDigitalWallet.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="LoadTestData">
+      <DefaultValue>true</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
 </Project>

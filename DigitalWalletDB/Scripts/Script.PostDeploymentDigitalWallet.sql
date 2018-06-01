@@ -13,6 +13,12 @@ IF '$(LoadTestData)' = 'true'
 
 BEGIN
 
+Delete From WorkAllocation
+Delete From [User]
+Delete From [Transaction]
+Delete From Team
+Delete From Invoice
+Delete From Account
 
 INSERT INTO ACCOUNT (AccountNo, Balance) VALUES
 (12345, $500.00),
