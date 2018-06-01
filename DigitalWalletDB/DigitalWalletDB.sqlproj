@@ -58,6 +58,7 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\User.sql" />
@@ -66,5 +67,8 @@
     <Build Include="Tables\Invoice.sql" />
     <Build Include="Tables\Transaction.sql" />
     <Build Include="Tables\WorkAllocation.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeploymentDigitalWallet.sql" />
   </ItemGroup>
 </Project>
