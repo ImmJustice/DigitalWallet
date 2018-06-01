@@ -1,0 +1,3 @@
+@Imports DigitalWalletAPI.Areas.HelpPage.ModelDescriptions
+@ModelType SimpleTypeModelDescription
+@Model.Documentation

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e0be2c8e74ff45a7993a6b9c25e975fd" Name="Diagram1">
+        <EntityTypeShape EntityType="DigitalWalletDBModel.Account" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalWalletDBModel.Invoice" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalWalletDBModel.Team" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalWalletDBModel.Transaction" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalWalletDBModel.User" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalWalletDBModel.WorkAllocation" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <AssociationConnector Association="DigitalWalletDBModel.FK_AccountID" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalWalletDBModel.FK_AccountNo" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalWalletDBModel.FK_InvoiceAccountFrom" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalWalletDBModel.FK_InvoiceAccountTo" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalWalletDBModel.FK_TransAccountFrom" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalWalletDBModel.FK_TransAccountTo" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalWalletDBModel.FK_TransInvoiceNo" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalWalletDBModel.FK_TeamID" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalWalletDBModel.FK_UserID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
