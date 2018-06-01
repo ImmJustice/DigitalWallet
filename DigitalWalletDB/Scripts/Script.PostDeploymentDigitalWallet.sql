@@ -29,11 +29,11 @@ INSERT INTO ACCOUNT (AccountNo, Balance) VALUES
 (11111, $99999.99);
 
 INSERT INTO INVOICE (InvoiceNo, AccountTo, AccountFrom, DateIssued, Amount) VALUES
-(10001, 12345, 56789, '2018-05-28', $14.62),
-(10002, 23456, 45678, '2018-04-27', $731.94),
-(10003, 34567, 23456, '2018-02-16', $261.96),
-(10004, 45678, 34567, '2018-03-05', $305.12),
-(10005, 56789, 12345, '2018-01-01', $450.00);
+(10001, 12345, 56789, Convert(Datetime, '2018.05.28', 102), $14.62),
+(10002, 23456, 45678, Convert(Datetime, '2018.04.27', 102), $731.94),
+(10003, 34567, 23456, Convert(Datetime, '2018.02.6', 102), $261.96),
+(10004, 45678, 34567, Convert(Datetime, '2018.03.05', 102), $305.12),
+(10005, 56789, 12345, Convert(Datetime, '2018.01.01', 102), $450.00);
 
 INSERT INTO TEAM (TeamID, ProjectName, AccountNo) VALUES
 (98765, 'Sin City', 12345),
@@ -43,11 +43,11 @@ INSERT INTO TEAM (TeamID, ProjectName, AccountNo) VALUES
 (54321, 'Laughing Lizard', 56789);
 
 INSERT INTO [TRANSACTION](AccountTo, AccountFrom, Amount, InvoiceNo, DatePaid) VALUES
-(56789, 12345, $14.62, 10001, '2018-06-28'),
-(45678, 23456, $731.94, 10002, '2018-07-27'),
-(23456, 34567, $261.96, 10003, '2018-02-26'),
-(34567, 45678, $305.12, 10004, '2018-03-16'),
-(12345, 56789, $450.00, 10005, '2018-01-31');
+(56789, 12345, $14.62, 10001, Convert(Datetime, '2018.06.28', 102)),
+(45678, 23456, $731.94, 10002, Convert(Datetime, '2018.07.27', 102)),
+(23456, 34567, $261.96, 10003, Convert(Datetime, '2018.02.26', 102)),
+(34567, 45678, $305.12, 10004, Convert(Datetime, '2018.03.16', 102)),
+(12345, 56789, $450.00, 10005, Convert(Datetime, '2018.01.31', 102));
 
 INSERT INTO [USER] (UserID, UserType, FirstName,  LastName, Email, PhoneNo, AccountNo) VALUES
 (15935, 'S', 'Joe', 'Davis', 'jdavis@gmail.com', 04756382224, 12345),
