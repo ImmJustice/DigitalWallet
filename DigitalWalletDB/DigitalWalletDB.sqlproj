@@ -68,4 +68,7 @@
     <Build Include="Tables\Transaction.sql" />
     <Build Include="Tables\WorkAllocation.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeploymentDigitalWallet.sql" />
+  </ItemGroup>
 </Project>
