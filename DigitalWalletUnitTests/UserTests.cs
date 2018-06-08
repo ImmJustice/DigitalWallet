@@ -43,5 +43,18 @@ namespace DigitalWalletUnitTests
             Assert.AreEqual("2002", fu2._userID);
             Assert.AreEqual("Student", fu2._userType);
         }
+        [Test]
+        public void CreateProjectTeam_IsCalled_UserType_IsStudent()
+        {
+            try
+            {
+                fu2.CreateProjectTeam();
+            }
+            catch (Exception e)
+            {
+                Assert.IsTrue(e.Message.Contains("You do not have permission to do that"));
+            }
+            
+        }
     }
 }

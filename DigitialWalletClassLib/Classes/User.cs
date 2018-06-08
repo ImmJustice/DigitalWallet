@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DigitalWalletClassLib;
 
 namespace DigitalWalletClassLib
 {
@@ -22,24 +23,29 @@ namespace DigitalWalletClassLib
         public string UserID { get; set; }
         public string UserType { get; set; }*/
 
-        /*public ProjectTeam CreateProjectTeam()
+        public ProjectTeam CreateProjectTeam()
         {
-            if (_userType == Teacher)
+            if (_userType == "Teacher")
             {
-                return ProjectTeam();
+                return new ProjectTeam("1111", "salt lake", "0000");
             }
             else
-           MessageBox.Show("You do not have permission to do that");
-            
+            {
+                throw new Exception("You do not have permission to do that");
+            }
+
         }
 
-        public ProjectTeam UpdateProjectTeam(string _teamId)
+        /*public void UpdateProjectTeam(string _teamId)
         {
             if (_userType == Teacher)
             {
-                ProjectTeam(_teamId);
+                ProjectTeam();
             }
-            else MessageBox.Show("You do not have permission to do that");
+            else
+            {
+                throw new Exception("You do not have permission to do that");
+            }
         }*/
 
         public User(string AccountNo, string FirstName, string LastName, string PhoneNo, string UserID, string UserType)
