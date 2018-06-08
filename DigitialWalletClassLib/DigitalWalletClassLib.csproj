@@ -76,7 +76,12 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DigitalWalletApp\DigitalWalletApp.csproj">
+      <Project>{f58ed5b6-1c76-4b8b-ac49-8c379255a221}</Project>
+      <Name>DigitalWalletApp</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
