@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DigitalWalletDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DigitalWalletDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Account">
           <Key>
             <PropertyRef Name="AccountNo" />
@@ -50,7 +50,7 @@
           <Property Name="FirstName" Type="nvarchar" MaxLength="20" />
           <Property Name="LastName" Type="nvarchar" MaxLength="20" />
           <Property Name="Email" Type="nvarchar" MaxLength="40" />
-          <Property Name="PhoneNo" Type="int" />
+          <Property Name="PhoneNo" Type="nvarchar" MaxLength="15" />
           <Property Name="AccountNo" Type="int" />
         </EntityType>
         <EntityType Name="WorkAllocation">
@@ -214,8 +214,7 @@
             <End Role="WorkAllocation" EntitySet="WorkAllocation" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DigitalWalletDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -278,7 +277,7 @@
           <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="LastName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="PhoneNo" Type="Int32" />
+          <Property Name="PhoneNo" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
           <Property Name="AccountNo" Type="Int32" />
           <NavigationProperty Name="Account" Relationship="Self.FK_AccountNo" FromRole="User" ToRole="Account" />
           <NavigationProperty Name="WorkAllocations" Relationship="Self.FK_UserID" FromRole="User" ToRole="WorkAllocation" />

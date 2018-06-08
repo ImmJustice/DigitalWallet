@@ -9,6 +9,7 @@
 
 namespace DigitalWalletApp.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -25,10 +26,12 @@ namespace DigitalWalletApp.Models
         public int AccountFrom { get; set; }
         public System.DateTime DateIssued { get; set; }
         public decimal Amount { get; set; }
-    
+        [JsonIgnore]
         public virtual Account Account { get; set; }
+        [JsonIgnore]
         public virtual Account Account1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Transaction> Transactions { get; set; }
     }
 }

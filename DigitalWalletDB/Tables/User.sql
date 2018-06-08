@@ -5,7 +5,7 @@
 	[FirstName] NVarChar(20),
 	[LastName] NVarChar(20),
 	[Email] NVarChar(40),
-	[PhoneNo] Int,
+	[PhoneNo] NVarChar(15),
 	[AccountNo] Int,
 	Constraint PK_UserID Primary Key (UserID),
 	Constraint FK_AccountNo Foreign Key (AccountNo) References Account(AccountNo)

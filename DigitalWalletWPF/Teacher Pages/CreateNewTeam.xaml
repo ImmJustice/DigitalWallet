@@ -1,0 +1,151 @@
+﻿<Page x:Class="DigitalWalletWPF.CreateNewTeam"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DigitalWalletWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="CreateNewTeam">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="0,10,0,10">
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" TextAlignment="Center" FontSize="36">Digital Wallet</TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Rectangle HorizontalAlignment="Stretch" Fill="Black" Height="1"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" TextAlignment="Center" FontSize="24">Create New Team</TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    
+                    <Grid Grid.Row="0" Grid.Column="0">
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="20">Students in Teams</TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="0">
+                        <ListBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="175" Name="SearchAndSelectView">
+                            <ListBoxItem x:Name="teamstudent1" Content="Nicholas Ainsworth"/>
+                            <ListBoxItem x:Name="teamstudent2" Content="Lucais Smith Dowd"/>
+                            <ListBoxItem x:Name="teamstudent3" Content="Hamish Lyall"/>
+                            <ListBoxItem x:Name="teamstudent4" Content="Myles Glenn Gaerlan"/>
+                            <ListBoxItem x:Name="teamstudent5" Content="Thaceu Zaathang"/>
+                            <ListBoxItem x:Name="teamstudent6" Content="Rowell Cristoria"/>
+                        </ListBox>
+                    </Grid>
+
+                    <Grid Grid.Row="0" Grid.Column="1">
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="20">List of all Students</TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="1">
+                        <ListBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="175" Name="AllStudents">
+                            <ListBoxItem x:Name="student1" Content="Nicholas Ainsworth"/>
+                            <ListBoxItem x:Name="student2" Content="Lucais Smith Dowd"/>
+                            <ListBoxItem x:Name="student3" Content="Hamish Lyall"/>
+                            <ListBoxItem x:Name="student4" Content="Myles Glenn Gaerlan"/>
+                            <ListBoxItem x:Name="student5" Content="Thaceu Zaathang"/>
+                            <ListBoxItem x:Name="student6" Content="Rowell Cristoria"/>
+                            <ListBoxItem x:Name="student7" Content="OCD Boy"/>
+                            <ListBoxItem x:Name="student8" Content="Windows Update"/>
+                            <ListBoxItem x:Name="student9" Content="Dillans DB"/>
+                            <ListBoxItem x:Name="student10" Content="Quake is Broken"/>
+                        </ListBox>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!--Team Name -->
+                    <Grid Grid.Row="0" Margin="45,0,45,0">
+                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Bottom" TextAlignment="Center" FontSize="16">Team Name</TextBlock>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <TextBox x:Name="teamName" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="16" Width="300"/>
+                    </Grid>
+
+                    <!--Starting Account Balance -->
+                    <Grid Grid.Row="2" Margin="45,0,45,0">
+                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Bottom" TextAlignment="Center" FontSize="16">Starting Account Balance</TextBlock>
+                    </Grid>
+
+                    <Grid Grid.Row="3">
+                        <TextBox x:Name="accountBalance" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="16" Width="300"/>
+                    </Grid>
+
+                </Grid>
+
+
+
+
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Button Margin="25,5,25,5" x:Name="AddFunds" Click="AddFunds_Click" FontSize="16" Content="Add Funds"/>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Button Margin="25,5,25,5" x:Name="SaveTeamAccount" Click="SaveTeamAccount_Click" FontSize="16" Content="Save Team Account"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button Margin="25,5,25,5" x:Name="Exit" Click="Exit_Click" FontSize="16" Content="Cancel"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

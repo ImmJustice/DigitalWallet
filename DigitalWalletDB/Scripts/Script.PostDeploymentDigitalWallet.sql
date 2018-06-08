@@ -13,6 +13,12 @@ IF '$(LoadTestData)' = 'true'
 
 BEGIN
 
+Delete From WorkAllocation
+Delete From [User]
+Delete From [Transaction]
+Delete From Team
+Delete From Invoice
+Delete From Account
 
 INSERT INTO ACCOUNT (AccountNo, Balance) VALUES
 (12345, $500.00),
@@ -44,12 +50,12 @@ INSERT INTO [TRANSACTION](AccountTo, AccountFrom, Amount, InvoiceNo, DatePaid) V
 (12345, 56789, $450.00, 10005, Convert(Datetime, '2018.01.31', 102));
 
 INSERT INTO [USER] (UserID, UserType, FirstName,  LastName, Email, PhoneNo, AccountNo) VALUES
-(15935, 'S', 'Joe', 'Davis', 'jdavis@gmail.com', 04756382224, 12345),
-(35795, 'S', 'Richard', 'Anderson', 'r.anderson@student.swin.edu.au', 0447448362, 23456),
-(75365, 'S', 'Mary', 'Smith', 'mrysmth@hotmail.com', 0456123321, 34567),
-(95125, 'S', 'Paul', 'Lever', 'plever@gmail.com', 0444895632, 45678),
-(85245, 'S', 'Robby', 'Robbo', 'robinator@aol.com', 0478963258, 56789),
-(55555, 'R', 'Anh', 'Nguyen', 'anhguyen@yahoomail.com.au', 0444444444, 11111); 
+(15935, 'S', 'Joe', 'Davis', 'jdavis@gmail.com', '04756382224', 12345),
+(35795, 'S', 'Richard', 'Anderson', 'r.anderson@student.swin.edu.au', '0447448362', 23456),
+(75365, 'S', 'Mary', 'Smith', 'mrysmth@hotmail.com', '0456123321', 34567),
+(95125, 'S', 'Paul', 'Lever', 'plever@gmail.com', '0444895632', 45678),
+(85245, 'S', 'Robby', 'Robbo', 'robinator@aol.com', '0478963258', 56789),
+(55555, 'R', 'Anh', 'Nguyen', 'anhguyen@yahoomail.com.au', '0444444444', 11111); 
 
 INSERT INTO WORKALLOCATION (TeamID, UserID, [Role]) VALUES
 (98765, 15935, 'Leader'),

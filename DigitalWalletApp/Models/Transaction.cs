@@ -9,6 +9,7 @@
 
 namespace DigitalWalletApp.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -19,9 +20,11 @@ namespace DigitalWalletApp.Models
         public decimal Amount { get; set; }
         public Nullable<int> InvoiceNo { get; set; }
         public System.DateTime DatePaid { get; set; }
-    
+        [JsonIgnore]
         public virtual Account Account { get; set; }
+        [JsonIgnore]
         public virtual Account Account1 { get; set; }
+        [JsonIgnore]
         public virtual Invoice Invoice { get; set; }
     }
 }

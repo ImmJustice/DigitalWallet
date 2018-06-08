@@ -1,0 +1,85 @@
+﻿<Page x:Class="DigitalWalletWPF.MainMenuStudent"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DigitalWalletWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainMenuStudent">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition />
+            <RowDefinition Height="200"/>
+            <RowDefinition />
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="0,10,0,10">
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" TextAlignment="Center" FontSize="36">Digital Wallet</TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Rectangle HorizontalAlignment="Stretch" Fill="Black" Height="1"/>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Button Margin="75,5,25,5" x:Name="PersonalProfile" Click="PersonalProfile_Click" FontSize="24" Content="Personal Profile"/>
+            </Grid>
+
+            <Grid Grid.Column="1" Grid.Row="0">
+                <Button Margin="25,5,75,5" x:Name="StudentProfiles" Click="StudentProfiles_Click" FontSize="24" Content="Student Profiles"/>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Button Margin="75,5,25,5" x:Name="PersonalAccount" Click="PersonalAccount_Click" FontSize="24" Content="Personal Account"/>
+            </Grid>
+
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Button Margin="25,5,75,5" x:Name="CurrentWork" Click="CurrentWork_Click" FontSize="24" Content="Current Work"/>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="2">
+                <Button Margin="75,5,25,5" x:Name="TeamProfiles" Click="TeamProfiles_Click" FontSize="24" Content="Team Profiles"/>
+            </Grid>
+
+            <Grid Grid.Column="1" Grid.Row="2">
+                <Button Margin="25,5,75,5" x:Name="JobAdvertisements" Click="JobAdvertisements_Click" FontSize="24" Content="Job Advertisements"/>
+            </Grid>
+
+
+
+
+        </Grid>
+
+        
+
+        <Grid Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="2">
+                <Button Margin="50,0,50,0" x:Name="Exit" Click="Exit_Click" FontSize="16" Content="Exit" Height="60" VerticalAlignment="Bottom"/>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Page>
