@@ -8,25 +8,25 @@ namespace DigitalWalletClassLib
 {
     public class User
     {
-        private string _accountNo;
-        private string _firstName;
-        private string _lastName;
-        private string _phoneNo;
-        private string _userID;
-        private string _userType;
+        public string _accountNo { get; set; }
+        public string _firstName { get; set; }
+        public string _lastName { get; set; }
+        public string _phoneNo { get; set; }
+        public string _userID { get; set; }
+        public string _userType { get; set; }
 
-        public string AccountNo { get; set; }
+        /*public string AccountNo { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNo { get; set; }
         public string UserID { get; set; }
-        public string UserType { get; set; }
+        public string UserType { get; set; }*/
 
-        public ProjectTeam CreateProjectTeam()
+        /*public ProjectTeam CreateProjectTeam()
         {
             if (_userType == Teacher)
             {
-                ProjectTeam();
+                return ProjectTeam();
             }
             else
            MessageBox.Show("You do not have permission to do that");
@@ -40,7 +40,7 @@ namespace DigitalWalletClassLib
                 ProjectTeam(_teamId);
             }
             else MessageBox.Show("You do not have permission to do that");
-        }
+        }*/
 
         public User(string AccountNo, string FirstName, string LastName, string PhoneNo, string UserID, string UserType)
         {
