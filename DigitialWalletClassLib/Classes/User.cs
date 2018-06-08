@@ -9,6 +9,9 @@ namespace DigitalWalletClassLib
 {
     public class User
     {
+        private User usr;
+        private ProjectTeam prt;
+
         public string _accountNo { get; set; }
         public string _firstName { get; set; }
         public string _lastName { get; set; }
@@ -23,11 +26,14 @@ namespace DigitalWalletClassLib
         public string UserID { get; set; }
         public string UserType { get; set; }*/
 
-        public ProjectTeam CreateProjectTeam()
+        public ProjectTeam CreateProjectTeam(string teamID, string teamName, string accountNo)
         {
             if (_userType == "Teacher")
-            {
-                return new ProjectTeam("1111", "salt lake", "0000");
+            { 
+                /*teamID = Console.ReadLine();
+                teamName = Console.ReadLine();
+                accountNo = Console.ReadLine();*/
+                return new ProjectTeam(teamID, teamName, accountNo);
             }
             else
             {
@@ -36,17 +42,20 @@ namespace DigitalWalletClassLib
 
         }
 
-        /*public void UpdateProjectTeam(string _teamId)
+        public void UpdateProjectTeam(string _teamId)
         {
-            if (_userType == Teacher)
+            if (_userType == "Teacher")
             {
-                ProjectTeam();
+                prt._teamID = Console.ReadLine();
+                prt._teamName = Console.ReadLine();
+                prt._accountNo = Console.ReadLine();
+                //ProjectTeam(_teamId, teamName);
             }
             else
             {
                 throw new Exception("You do not have permission to do that");
             }
-        }*/
+        }
 
         public User(string AccountNo, string FirstName, string LastName, string PhoneNo, string UserID, string UserType)
         {
