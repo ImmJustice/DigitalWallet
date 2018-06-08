@@ -1,69 +1,27 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using DigitalWalletClassLib;
+using DigitalWalletUnitTests.Mocking;
 
 namespace DigitalWalletUnitTests
 {
-    /// <summary>
-    /// Summary description for ProjectTeamTests
-    /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ProjectTeamTests
     {
-        public ProjectTeamTests()
+        private ProjectTeam fpt;
+
+        [SetUp]
+        public void SetUp()
         {
-            //
-            // TODO: Add constructor logic here
-            //
+            fpt = new FakeProjectTeam("9009", "Salt Lake", "9876");
         }
-
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
+        [Test]
+        public void ProjectTeam_Constructor_IsCalled_AttributesSet()
         {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
+            Assert.AreEqual("9009", fpt._teamID);
+            Assert.AreEqual("Salt Lake", fpt._teamName);
+            Assert.AreEqual("9876", fpt._accountNo);
 
-        #region Additional test attributes
-        //
-        // You can use the following additional attributes as you write your tests:
-        //
-        // Use ClassInitialize to run code before running the first test in the class
-        // [ClassInitialize()]
-        // public static void MyClassInitialize(TestContext testContext) { }
-        //
-        // Use ClassCleanup to run code after all tests in a class have run
-        // [ClassCleanup()]
-        // public static void MyClassCleanup() { }
-        //
-        // Use TestInitialize to run code before running each test 
-        // [TestInitialize()]
-        // public void MyTestInitialize() { }
-        //
-        // Use TestCleanup to run code after each test has run
-        // [TestCleanup()]
-        // public void MyTestCleanup() { }
-        //
-        #endregion
-
-        [TestMethod]
-        public void TestMethod1()
-        {
-            //
-            // TODO: Add test logic here
-            //
         }
     }
 }

@@ -3,43 +3,49 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DigitalWalletClassLib;
 
-namespace DigitialWalletClassLib
+namespace DigitalWalletClassLib
 {
     public class User
     {
-        private string _accountNo;
-        private string _firstName;
-        private string _lastName;
-        private string _phoneNo;
-        private string _userID;
-        private string _userType;
+        public string _accountNo { get; set; }
+        public string _firstName { get; set; }
+        public string _lastName { get; set; }
+        public string _phoneNo { get; set; }
+        public string _userID { get; set; }
+        public string _userType { get; set; }
 
-        public string AccountNo { get; set; }
+        /*public string AccountNo { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNo { get; set; }
         public string UserID { get; set; }
-        public string UserType { get; set; }
+        public string UserType { get; set; }*/
 
-        /*public CreateProjectTeam()
+        public ProjectTeam CreateProjectTeam()
+        {
+            if (_userType == "Teacher")
+            {
+                return new ProjectTeam("1111", "salt lake", "0000");
+            }
+            else
+            {
+                throw new Exception("You do not have permission to do that");
+            }
+
+        }
+
+        /*public void UpdateProjectTeam(string _teamId)
         {
             if (_userType == Teacher)
             {
                 ProjectTeam();
             }
             else
-            return MessageBox.Show("You do not have permission to do that");
-            
-        }
-
-        public UpdateProjectTeam()
-        {
-            if (_userType == Teacher)
             {
-                ProjectTeam(_teamId);
+                throw new Exception("You do not have permission to do that");
             }
-            else MessageBox.Show("You do not have permission to do that");
         }*/
 
         public User(string AccountNo, string FirstName, string LastName, string PhoneNo, string UserID, string UserType)

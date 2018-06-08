@@ -1,69 +1,60 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using DigitalWalletClassLib;
+using DigitalWalletUnitTests.Mocking;
 
 namespace DigitalWalletUnitTests
 {
-    /// <summary>
-    /// Summary description for UserTests
-    /// </summary>
-    [TestClass]
+    [TestFixture]
     public class UserTests
     {
-        public UserTests()
+        private User fu, fu2;
+        private ProjectTeam fpt;
+
+        [SetUp]
+        public void Setup()
         {
-            //
-            // TODO: Add constructor logic here
-            //
+            fu = new FakeUser("1234", "FakeFirstName", "FakeLastName", "0400 000 000", "1001", "Teacher");
+            fu2 = new FakeUser("4321", "FakeStudentName", "FakeStudentSurname", "0444 444 444", "2002", "Student");
+
+            fpt = new FakeProjectTeam("9009", "Salt Lake", "9876");
         }
-
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
+        [Test]
+        [Ignore("Test To Ignore")]
+        public void Test_To_Ignore()
         {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
         }
-
-        #region Additional test attributes
-        //
-        // You can use the following additional attributes as you write your tests:
-        //
-        // Use ClassInitialize to run code before running the first test in the class
-        // [ClassInitialize()]
-        // public static void MyClassInitialize(TestContext testContext) { }
-        //
-        // Use ClassCleanup to run code after all tests in a class have run
-        // [ClassCleanup()]
-        // public static void MyClassCleanup() { }
-        //
-        // Use TestInitialize to run code before running each test 
-        // [TestInitialize()]
-        // public void MyTestInitialize() { }
-        //
-        // Use TestCleanup to run code after each test has run
-        // [TestCleanup()]
-        // public void MyTestCleanup() { }
-        //
-        #endregion
-
-        [TestMethod]
-        public void TestMethod1()
+        [Test]
+        public void User_Constructor_IsCalled_AttributesSet()
         {
-            //
-            // TODO: Add test logic here
-            //
+            //Test for Teacher
+            Assert.AreEqual("1234", fu._accountNo);
+            Assert.AreEqual("FakeFirstName", fu._firstName);
+            Assert.AreEqual("FakeLastName", fu._lastName);
+            Assert.AreEqual("0400 000 000", fu._phoneNo);
+            Assert.AreEqual("1001", fu._userID);
+            Assert.AreEqual("Teacher", fu._userType);
+
+            //Tests for Student
+            Assert.AreEqual("4321", fu2._accountNo);
+            Assert.AreEqual("FakeStudentName", fu2._firstName);
+            Assert.AreEqual("FakeStudentSurname", fu2._lastName);
+            Assert.AreEqual("0444 444 444", fu2._phoneNo);
+            Assert.AreEqual("2002", fu2._userID);
+            Assert.AreEqual("Student", fu2._userType);
+        }
+        [Test]
+        public void CreateProjectTeam_IsCalled_UserType_IsStudent()
+        {
+            try
+            {
+                fu2.CreateProjectTeam();
+            }
+            catch (Exception e)
+            {
+                Assert.IsTrue(e.Message.Contains("You do not have permission to do that"));
+            }
+            
         }
     }
 }
