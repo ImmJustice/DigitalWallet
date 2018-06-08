@@ -22,7 +22,7 @@ namespace DigitalWalletApp.Controllers.ModelControllers
             return db.Users;
         }
 
-        // GET: api/Users/5
+        // GET: api/Users
         [ResponseType(typeof(User))]
         public IHttpActionResult GetUser(int id)
         {

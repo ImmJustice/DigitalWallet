@@ -9,6 +9,7 @@
 
 namespace DigitalWalletApp.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -23,9 +24,10 @@ namespace DigitalWalletApp.Models
         public int TeamID { get; set; }
         public string ProjectName { get; set; }
         public int AccountNo { get; set; }
-    
+        [JsonIgnore]
         public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<WorkAllocation> WorkAllocations { get; set; }
     }
 }

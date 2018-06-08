@@ -6,7 +6,7 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+using Newtonsoft.Json;
 namespace DigitalWalletApp.Models
 {
     using System;
@@ -25,11 +25,12 @@ namespace DigitalWalletApp.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
-        public Nullable<int> PhoneNo { get; set; }
+        public string PhoneNo { get; set; }
         public Nullable<int> AccountNo { get; set; }
-    
+        [JsonIgnore]
         public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<WorkAllocation> WorkAllocations { get; set; }
     }
 }
