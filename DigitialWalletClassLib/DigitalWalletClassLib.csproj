@@ -8,8 +8,8 @@
     <ProjectGuid>{2947C9A6-123E-4E7E-8161-AB1F658CD4CE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DigitialWalletClassLib</RootNamespace>
-    <AssemblyName>DigitialWalletClassLib</AssemblyName>
+    <RootNamespace>DigitalWalletClassLib</RootNamespace>
+    <AssemblyName>DigitalWalletClassLib</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>

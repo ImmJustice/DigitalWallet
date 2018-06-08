@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitialWalletClassLib
+namespace DigitalWalletClassLib
 {
     public class User
     {
@@ -22,25 +22,25 @@ namespace DigitialWalletClassLib
         public string UserID { get; set; }
         public string UserType { get; set; }
 
-        /*public CreateProjectTeam()
+        public ProjectTeam CreateProjectTeam()
         {
             if (_userType == Teacher)
             {
                 ProjectTeam();
             }
             else
-            return MessageBox.Show("You do not have permission to do that");
+           MessageBox.Show("You do not have permission to do that");
             
         }
 
-        public UpdateProjectTeam()
+        public ProjectTeam UpdateProjectTeam(string _teamId)
         {
             if (_userType == Teacher)
             {
                 ProjectTeam(_teamId);
             }
             else MessageBox.Show("You do not have permission to do that");
-        }*/
+        }
 
         public User(string AccountNo, string FirstName, string LastName, string PhoneNo, string UserID, string UserType)
         {
