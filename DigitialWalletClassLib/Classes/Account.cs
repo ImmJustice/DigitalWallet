@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DigitalWalletClassLib
 {
-    class Account
+    public class Account
     {
         private string _accountNo { get; set; }
         private double _balance { get; set; }
