@@ -39,7 +39,21 @@ namespace DigitalWalletApp.Controllers.ModelControllers
             return Ok(invoice);
         }
 
+        [HttpGet]
+        [Route("AllAccountTo")]
+        [ResponseType(typeof(List<Invoice>))]
+        public IHttpActionResult AllAccountTo(int accountTo)
+        {
+            return Ok(db.Invoices.Where(I => I.AccountTo == accountTo));
+        }
 
+        [HttpGet]
+        [Route("AccountFromTo")]
+        [ResponseType(typeof(List<Invoice>))]
+        public IHttpActionResult AllAccountFrom(int accountFrom)
+        {
+            return Ok(db.Invoices.Where(I => I.AccountFrom == accountFrom));
+        }
 
         //// PUT: api/Invoices/5
         //[HttpGet]
