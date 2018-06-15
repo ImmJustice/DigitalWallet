@@ -28,16 +28,16 @@ namespace DigitalWalletWPF.Teacher_Pages
 
         private void ConfirmTransaction_Click(object sender, RoutedEventArgs e)
         {
-            MainMenuTeacher mainMenuTeacher = new MainMenuTeacher();
-            NavigationService.Navigate(mainMenuTeacher);
+            ViewTeam viewTeam = new ViewTeam();
+            NavigationService.Navigate(viewTeam);
 
             //Save Transaction
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            MainMenuTeacher mainMenuTeacher = new MainMenuTeacher();
-            NavigationService.Navigate(mainMenuTeacher);
+            ViewTeam viewTeam = new ViewTeam();
+            NavigationService.Navigate(viewTeam);
         }
     }
 }

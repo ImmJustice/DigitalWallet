@@ -57,6 +57,9 @@
     <Compile Include="Teacher Pages\TransferFunds.xaml.cs">
       <DependentUpon>TransferFunds.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Teacher Pages\ViewTeam.xaml.cs">
+      <DependentUpon>ViewTeam.xaml</DependentUpon>
+    </Compile>
     <Page Include="Teacher Pages\CreateNewStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -113,6 +116,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Teacher Pages\TransferFunds.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher Pages\ViewTeam.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

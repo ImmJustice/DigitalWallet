@@ -39,6 +39,13 @@ namespace DigitalWalletApp.Controllers.ModelControllers
             return Ok(workAllocation);
         }
 
+        [HttpGet]
+        [Route("TeamByStudent")]
+        [ResponseType(typeof(List<WorkAllocation>))]
+        public IHttpActionResult TeamByStudent(int userID)
+        {
+            return Ok(db.WorkAllocations.Where(W => W.UserID ==userID));
+        }
         // PUT: api/WorkAllocations/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutWorkAllocation(int id, WorkAllocation workAllocation)

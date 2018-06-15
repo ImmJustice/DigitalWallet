@@ -38,6 +38,22 @@ namespace DigitalWalletApp.Controllers.ModelControllers
             return Ok(transaction);
         }
 
+        [HttpGet]
+        [Route("AccountTo")]
+        [ResponseType(typeof(List<Transaction>))]
+        public IHttpActionResult TransAccountTo(int accountTo)
+        {
+            return Ok(db.Transactions.Where(T => T.AccountTo == accountTo));
+        }
+
+        [HttpGet]
+        [Route("AccountFrom")]
+        [ResponseType(typeof(List<Transaction>))]
+        public IHttpActionResult TransAccountFrom(int accountFrom)
+        {
+            return Ok(db.Transactions.Where(T => T.AccountFrom == accountFrom));
+        }
+
         // PUT: api/Transactions/5
 
         [ResponseType(typeof(void))]
