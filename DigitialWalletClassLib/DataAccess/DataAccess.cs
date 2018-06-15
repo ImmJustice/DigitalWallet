@@ -21,7 +21,7 @@ namespace DigitialWalletClassLib
 
         public async Task<List<User>>LoadUserData()
         {
-            ResponseMessage = await client.GetAsync("Users");
+            ResponseMessage = await client.GetAsync("Users/allusers");
             var Content = JsonConvert.DeserializeObject<List<User>>(await ResponseMessage.Content.ReadAsStringAsync());
             return Content;
         }

@@ -149,5 +149,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DigitialWalletClassLib\DigitalWalletClassLib.csproj">
+      <Project>{2947c9a6-123e-4e7e-8161-ab1f658cd4ce}</Project>
+      <Name>DigitalWalletClassLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

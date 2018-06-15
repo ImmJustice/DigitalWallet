@@ -11,14 +11,9 @@ namespace DigitalWalletClassLib
 {
     public static class Controller
     {
-       
-
-        public bool Login(int LoginID, int LoginPass)
-        {
+        //public bool Login(int LoginID, int LoginPass)
+        //{
             
-            
-            
-        }
-
+        //}
     }
 }
