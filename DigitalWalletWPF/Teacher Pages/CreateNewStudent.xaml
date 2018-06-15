@@ -75,31 +75,24 @@
             </Grid>
 
             <!--Account Phone Number -->
-            <Grid Grid.Column="0" Grid.Row="6" Margin="45,0,45,0">
+            <Grid Grid.Column="1" Grid.Row="0" Margin="45,0,45,0">
                 <TextBlock HorizontalAlignment="Left" VerticalAlignment="Bottom" TextAlignment="Center" FontSize="16">Phone Number</TextBlock>
             </Grid>
 
-            <Grid Grid.Column="0" Grid.Row="7">
+            <Grid Grid.Column="1" Grid.Row="1">
                 <TextBox x:Name="phoneNumber" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="16" Width="300"/>
             </Grid>
 
             <!--Account Email -->
-            <Grid Grid.Column="1" Grid.Row="0" Margin="45,0,45,0">
+            <Grid Grid.Column="1" Grid.Row="2" Margin="45,0,45,0">
                 <TextBlock HorizontalAlignment="Left" VerticalAlignment="Bottom" TextAlignment="Center" FontSize="16">Email</TextBlock>
             </Grid>
 
-            <Grid Grid.Column="1" Grid.Row="1">
+            <Grid Grid.Column="1" Grid.Row="3">
                 <TextBox x:Name="email" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="16" Width="300"/>
             </Grid>
 
-            <!--Account Current Balance -->
-            <Grid Grid.Column="1" Grid.Row="2" Margin="45,0,45,0">
-                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Bottom" TextAlignment="Center" FontSize="16">Current Account Balance</TextBlock>
-            </Grid>
-
-            <Grid Grid.Column="1" Grid.Row="3">
-                <TextBox x:Name="accountBalance" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="16" Width="300"/>
-            </Grid>
+            
         </Grid>
 
 

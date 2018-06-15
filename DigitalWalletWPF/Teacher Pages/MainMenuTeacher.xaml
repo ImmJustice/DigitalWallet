@@ -13,9 +13,8 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="5"/>
             <RowDefinition />
-            <RowDefinition Height="75"/>
-            <RowDefinition Height="75"/>
-            <RowDefinition Height="75"/>
+            <RowDefinition Height="112.5"/>
+            <RowDefinition Height="112.5"/>
             <RowDefinition />
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
@@ -35,12 +34,8 @@
         <Grid Grid.Row="4">
             <Button Margin="150,5,150,5" x:Name="ManageTeams" Click="ManageTeams_Click" FontSize="24" Content="Manage Teams"/>
         </Grid>
-        
-        <Grid Grid.Row="5">
-            <Button Margin="150,5,150,5" x:Name="TransferMoney" Click="TransferMoney_Click" FontSize="24" Content="Transfer Money"/>
-        </Grid>
 
-        <Grid Grid.Row="7">
+        <Grid Grid.Row="6">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>

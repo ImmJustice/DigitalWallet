@@ -75,12 +75,16 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
+                <Grid Grid.Row="1">
+                    <Button Margin="25,5,25,5" x:Name="ViewTeam" Click="ViewTeam_Click" FontSize="16" Content="View Team"/>
+                </Grid>
+                
                 <Grid Grid.Row="2">
                     <Button Margin="25,5,25,5" x:Name="CreateNewTeam" Click="CreateNewTeam_Click" FontSize="16" Content="Create New Team"/>
                 </Grid>
 
                 <Grid Grid.Row="3">
-                    <Button Margin="25,5,25,5" x:Name="Exit" Click="Exit_Click" FontSize="16" Content="Exit"/>
+                    <Button Margin="25,5,25,5" x:Name="Exit" Click="Exit_Click" FontSize="16" Content="Return"/>
                 </Grid>
             </Grid>
         </Grid>
