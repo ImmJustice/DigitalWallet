@@ -11,22 +11,25 @@ using System.Web.Http.Description;
 using DigitalWalletApp.Models;
 
 namespace DigitalWalletApp.Controllers.ModelControllers
-{
+{   [RoutePrefix("api/Transactions")]
     public class TransactionsController : ApiController
     {
         private DigitalWalletDBEntities1 db = new DigitalWalletDBEntities1();
 
         // GET: api/Transactions
+        [HttpGet]
+        [Route("AllTransactions")]
         public IQueryable<Transaction> GetTransactions()
         {
             return db.Transactions;
         }
 
         // GET: api/Transactions/5
+        [HttpGet]
         [ResponseType(typeof(Transaction))]
-        public IHttpActionResult GetTransaction(int id)
+        public IHttpActionResult GetTransaction(int AccountTo, DateTime datepaid)
         {
-            Transaction transaction = db.Transactions.Find(id);
+            Transaction transaction = db.Transactions.Find(AccountTo, datepaid);
             if (transaction == null)
             {
                 return NotFound();
@@ -36,6 +39,7 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         }
 
         // PUT: api/Transactions/5
+
         [ResponseType(typeof(void))]
         public IHttpActionResult PutTransaction(int id, Transaction transaction)
         {
@@ -71,7 +75,9 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         }
 
         // POST: api/Transactions
-        [ResponseType(typeof(Transaction))]
+        [HttpGet]
+        [Route("AddTransaction")]
+        [ResponseType(typeof(bool))]
         public IHttpActionResult PostTransaction(Transaction transaction)
         {
             if (!ModelState.IsValid)
@@ -101,6 +107,8 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         }
 
         // DELETE: api/Transactions/5
+        [HttpGet]
+        [Route("DeleteTransaction")]
         [ResponseType(typeof(Transaction))]
         public IHttpActionResult DeleteTransaction(int id)
         {

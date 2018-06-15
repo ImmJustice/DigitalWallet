@@ -11,18 +11,29 @@ using System.Web.Http.Description;
 using DigitalWalletApp.Models;
 
 namespace DigitalWalletApp.Controllers.ModelControllers
-{
+{   [RoutePrefix("api/Users")]
     public class UsersController : ApiController
     {
         private DigitalWalletDBEntities1 db = new DigitalWalletDBEntities1();
 
         // GET: api/Users
+        [HttpGet]
+        [Route("AllUsers")]
         public IQueryable<User> GetUsers()
         {
             return db.Users;
         }
 
+        [HttpGet]
+        [Route("AllStudents")]
+        public IQueryable<User> GetStudents()
+        {
+            return db.Users.Where(U => U.UserType == "S");
+        }
+
         // GET: api/Users
+        [HttpGet]
+        [Route("GetUser")]
         [ResponseType(typeof(User))]
         public IHttpActionResult GetUser(int id)
         {
@@ -71,7 +82,9 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         }
 
         // POST: api/Users
-        [ResponseType(typeof(User))]
+        [HttpGet]
+        [Route("AddUser")]
+        [ResponseType(typeof(Boolean))]
         public IHttpActionResult PostUser(User user)
         {
             if (!ModelState.IsValid)
@@ -101,7 +114,9 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         }
 
         // DELETE: api/Users/5
-        [ResponseType(typeof(User))]
+        [HttpGet]
+        [Route("DeleteUser")]
+        [ResponseType(typeof(Boolean))]
         public IHttpActionResult DeleteUser(int id)
         {
             User user = db.Users.Find(id);
@@ -115,6 +130,22 @@ namespace DigitalWalletApp.Controllers.ModelControllers
 
             return Ok(user);
         }
+
+        [HttpGet]
+        [Route("GetUserList")]
+        [ResponseType(typeof(List<String>))]
+        public IHttpActionResult UserList()
+        {
+            return Ok( db.Users.Select(U => U.UserID.ToString()).ToList());
+        }
+        [HttpGet]
+        [Route("GetStudents")]
+        [ResponseType(typeof(List<String>))]
+        public IHttpActionResult StudentList()
+        {
+            return Ok(db.Users.Where(U => U.UserType == "S").Select(U => U.UserID.ToString()).ToList());
+        }
+
 
         protected override void Dispose(bool disposing)
         {

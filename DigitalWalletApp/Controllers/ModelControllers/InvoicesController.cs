@@ -11,18 +11,22 @@ using System.Web.Http.Description;
 using DigitalWalletApp.Models;
 
 namespace DigitalWalletApp.Controllers.ModelControllers
-{
+{   [RoutePrefix("api/Invoices")]
     public class InvoicesController : ApiController
     {
         private DigitalWalletDBEntities1 db = new DigitalWalletDBEntities1();
 
         // GET: api/Invoices
+        [HttpGet]
+        [Route("AllInvoices")]
         public IQueryable<Invoice> GetInvoices()
         {
             return db.Invoices;
         }
 
         // GET: api/Invoices/5
+        [HttpGet]
+        [Route("GetInvoice")]
         [ResponseType(typeof(Invoice))]
         public IHttpActionResult GetInvoice(int id)
         {
@@ -35,43 +39,49 @@ namespace DigitalWalletApp.Controllers.ModelControllers
             return Ok(invoice);
         }
 
-        // PUT: api/Invoices/5
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutInvoice(int id, Invoice invoice)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
 
-            if (id != invoice.InvoiceNo)
-            {
-                return BadRequest();
-            }
 
-            db.Entry(invoice).State = EntityState.Modified;
+        //// PUT: api/Invoices/5
+        //[HttpGet]
+        //[Route("AddInvoice")]
+        //[ResponseType(typeof(void))]
+        //public IHttpActionResult PutInvoice(Invoice invoice)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
 
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!InvoiceExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    if (id != invoice.InvoiceNo)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            return StatusCode(HttpStatusCode.NoContent);
-        }
+        //    db.Entry(invoice).State = EntityState.Modified;
+
+        //    try
+        //    {
+        //        db.SaveChanges();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!InvoiceExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
+
+        //    return StatusCode(HttpStatusCode.NoContent);
+        //}
 
         // POST: api/Invoices
-        [ResponseType(typeof(Invoice))]
+        [HttpGet]
+        [Route("AddInvoice")]
+        [ResponseType(typeof(Boolean))]
         public IHttpActionResult PostInvoice(Invoice invoice)
         {
             if (!ModelState.IsValid)
@@ -101,7 +111,9 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         }
 
         // DELETE: api/Invoices/5
-        [ResponseType(typeof(Invoice))]
+        [HttpGet]
+        [Route("DeleteInvoice")]
+        [ResponseType(typeof(Boolean))]
         public IHttpActionResult DeleteInvoice(int id)
         {
             Invoice invoice = db.Invoices.Find(id);

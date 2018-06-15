@@ -11,18 +11,22 @@ using System.Web.Http.Description;
 using DigitalWalletApp.Models;
 
 namespace DigitalWalletApp.Controllers.ModelControllers
-{
+{   [RoutePrefix("api/Teams")]
     public class TeamsController : ApiController
     {
         private DigitalWalletDBEntities1 db = new DigitalWalletDBEntities1();
 
         // GET: api/Teams
+        [HttpGet]
+        [Route("AllTeams")]
         public IQueryable<Team> GetTeams()
         {
             return db.Teams;
         }
 
         // GET: api/Teams/5
+        [HttpGet]
+        [Route("GetTeam")]
         [ResponseType(typeof(Team))]
         public IHttpActionResult GetTeam(int id)
         {
@@ -36,6 +40,7 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         }
 
         // PUT: api/Teams/5
+        
         [ResponseType(typeof(void))]
         public IHttpActionResult PutTeam(int id, Team team)
         {
@@ -71,7 +76,9 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         }
 
         // POST: api/Teams
-        [ResponseType(typeof(Team))]
+        [HttpGet]
+        [Route("AddTeam")]
+        [ResponseType(typeof(Boolean))]
         public IHttpActionResult PostTeam(Team team)
         {
             if (!ModelState.IsValid)

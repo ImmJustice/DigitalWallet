@@ -11,22 +11,26 @@ using System.Web.Http.Description;
 using DigitalWalletApp.Models;
 
 namespace DigitalWalletApp.Controllers.ModelControllers
-{
+{   [RoutePrefix("api/Work")]
     public class WorkAllocationsController : ApiController
     {
         private DigitalWalletDBEntities1 db = new DigitalWalletDBEntities1();
 
         // GET: api/WorkAllocations
+        [HttpGet]
+        [Route("AllWork")]
         public IQueryable<WorkAllocation> GetWorkAllocations()
         {
             return db.WorkAllocations;
         }
 
         // GET: api/WorkAllocations/5
+        [HttpGet]
+        [Route("GetWork")]
         [ResponseType(typeof(WorkAllocation))]
-        public IHttpActionResult GetWorkAllocation(int id)
+        public IHttpActionResult GetWorkAllocation(int workId, int userId)
         {
-            WorkAllocation workAllocation = db.WorkAllocations.Find(id);
+            WorkAllocation workAllocation = db.WorkAllocations.Find(workId,userId);
             if (workAllocation == null)
             {
                 return NotFound();
@@ -71,7 +75,9 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         }
 
         // POST: api/WorkAllocations
-        [ResponseType(typeof(WorkAllocation))]
+        [HttpGet]
+        [Route("AddWork")]
+        [ResponseType(typeof(Boolean))]
         public IHttpActionResult PostWorkAllocation(WorkAllocation workAllocation)
         {
             if (!ModelState.IsValid)
@@ -101,7 +107,9 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         }
 
         // DELETE: api/WorkAllocations/5
-        [ResponseType(typeof(WorkAllocation))]
+        [HttpGet]
+        [Route("DeleteWork")]
+        [ResponseType(typeof(Boolean))]
         public IHttpActionResult DeleteWorkAllocation(int id)
         {
             WorkAllocation workAllocation = db.WorkAllocations.Find(id);

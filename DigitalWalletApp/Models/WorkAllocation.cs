@@ -6,7 +6,7 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+using Newtonsoft.Json;
 namespace DigitalWalletApp.Models
 {
     using System;
@@ -17,8 +17,9 @@ namespace DigitalWalletApp.Models
         public int TeamID { get; set; }
         public int UserID { get; set; }
         public string Role { get; set; }
-    
+        [JsonIgnore]
         public virtual Team Team { get; set; }
+        [JsonIgnore]
         public virtual User User { get; set; }
     }
 }
