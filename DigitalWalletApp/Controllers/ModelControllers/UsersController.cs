@@ -82,7 +82,7 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         }
 
         // POST: api/Users
-        [HttpGet]
+        [HttpPost]
         [Route("AddUser")]
         [ResponseType(typeof(Boolean))]
         public IHttpActionResult PostUser(User user)

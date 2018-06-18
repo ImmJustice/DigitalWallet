@@ -79,7 +79,7 @@ namespace DigitalWalletApp.Controllers.ModelControllers
 
 
         // POST: api/Teams
-        [HttpGet]
+        [HttpPost]
         [Route("AddTeam")]
         [ResponseType(typeof(Boolean))]
         public IHttpActionResult PostTeam(Team team)
@@ -111,6 +111,8 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         }
 
         // DELETE: api/Teams/5
+        [HttpGet]
+        [Route("DeleteTeam")]
         [ResponseType(typeof(Team))]
         public IHttpActionResult DeleteTeam(int id)
         {

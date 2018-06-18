@@ -83,7 +83,7 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         //}
 
         // POST: api/Accounts/AddAccount ()=> Account
-        [HttpGet]
+        [HttpPost]
         [Route("AddAccount")]
         [ResponseType(typeof(Boolean))]
         public IHttpActionResult PostAccount([FromBody]Account account)

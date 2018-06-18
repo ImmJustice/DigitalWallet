@@ -91,7 +91,7 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         }
 
         // POST: api/Transactions
-        [HttpGet]
+        [HttpPost]
         [Route("AddTransaction")]
         [ResponseType(typeof(bool))]
         public IHttpActionResult PostTransaction(Transaction transaction)
@@ -102,7 +102,6 @@ namespace DigitalWalletApp.Controllers.ModelControllers
             }
 
             db.Transactions.Add(transaction);
-
             try
             {
                 db.SaveChanges();
@@ -126,9 +125,9 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         [HttpGet]
         [Route("DeleteTransaction")]
         [ResponseType(typeof(Transaction))]
-        public IHttpActionResult DeleteTransaction(int id)
+        public IHttpActionResult DeleteTransaction(int id, DateTime date)
         {
-            Transaction transaction = db.Transactions.Find(id);
+            Transaction transaction = db.Transactions.Find(id,date);
             if (transaction == null)
             {
                 return NotFound();

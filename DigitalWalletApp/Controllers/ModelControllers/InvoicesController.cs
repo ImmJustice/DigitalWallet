@@ -93,7 +93,7 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         //}
 
         // POST: api/Invoices
-        [HttpGet]
+        [HttpPost]
         [Route("AddInvoice")]
         [ResponseType(typeof(Boolean))]
         public IHttpActionResult PostInvoice(Invoice invoice)

@@ -286,6 +286,7 @@
     <Content Include="Models\DigitalWalletAdo.edmx.diagram">
       <DependentUpon>DigitalWalletAdo.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\DigitalWalletApp20180615015607 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

@@ -82,7 +82,7 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         }
 
         // POST: api/WorkAllocations
-        [HttpGet]
+        [HttpPost]
         [Route("AddWork")]
         [ResponseType(typeof(Boolean))]
         public IHttpActionResult PostWorkAllocation(WorkAllocation workAllocation)
@@ -117,7 +117,7 @@ namespace DigitalWalletApp.Controllers.ModelControllers
         [HttpGet]
         [Route("DeleteWork")]
         [ResponseType(typeof(Boolean))]
-        public IHttpActionResult DeleteWorkAllocation(int id)
+        public IHttpActionResult DeleteWorkAllocation(int id, int team)
         {
             WorkAllocation workAllocation = db.WorkAllocations.Find(id);
             if (workAllocation == null)
