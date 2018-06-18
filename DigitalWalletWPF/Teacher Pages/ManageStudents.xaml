@@ -86,7 +86,7 @@
                 </Grid>
 
                 <Grid Grid.Row="3">
-                    <Button Margin="25,5,25,5" x:Name="Exit" Click="Exit_Click" FontSize="16" Content="Exit"/>
+                    <Button Margin="25,5,25,5" x:Name="Exit" Click="Exit_Click" FontSize="16" Content="Return"/>
                 </Grid>
             </Grid>
         </Grid>

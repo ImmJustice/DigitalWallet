@@ -37,5 +37,11 @@ namespace DigitalWalletWPF
             MainMenuTeacher mainMenuTeacher = new MainMenuTeacher();
             NavigationService.Navigate(mainMenuTeacher);
         }
+
+        private void ViewTeam_Click(object sender, RoutedEventArgs e)
+        {
+            ViewTeam viewTeam = new ViewTeam();
+            NavigationService.Navigate(viewTeam);
+        }
     }
 }

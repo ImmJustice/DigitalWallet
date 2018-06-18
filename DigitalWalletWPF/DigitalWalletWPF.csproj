@@ -57,6 +57,9 @@
     <Compile Include="Teacher Pages\TransferFunds.xaml.cs">
       <DependentUpon>TransferFunds.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Teacher Pages\ViewTeam.xaml.cs">
+      <DependentUpon>ViewTeam.xaml</DependentUpon>
+    </Compile>
     <Page Include="Teacher Pages\CreateNewStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -116,6 +119,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Teacher Pages\ViewTeam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Teacher Pages\ManageStudents.xaml.cs">
@@ -148,6 +155,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DigitialWalletClassLib\DigitalWalletClassLib.csproj">
+      <Project>{2947c9a6-123e-4e7e-8161-ab1f658cd4ce}</Project>
+      <Name>DigitalWalletClassLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
